@@ -32,7 +32,7 @@ print(b)
 
 import random
 a = random.randrange(1, 10)
-b = []
+b = [(]
 
 for i in range(1, 11):
     a = random.randrange(1, 10)
@@ -47,5 +47,29 @@ for i in range(1, 10):
     elif (c > (b[i])):
         c = c
 print(c)
+
+a = [1, 2, 3, 4, 5, 6, 7]
+
+print(a[2:5])
 """
+"""
+b = []
 a = int(input())
+
+while (a != 0):
+    b.append(a % 2)
+    a = a // 2
+for i in range(len(b)-1, -1, -1):
+    print(b[i])
+    while(d):
+    e.append(d % 2)
+    d = d // 2
+
+a = int(input())
+b = 1
+c = 100
+d = 2
+e = 50
+while(a < c // d):
+    d = d * 2
+"""
