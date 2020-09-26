@@ -1,77 +1,65 @@
 """
-def gc(a, b):
-    for i in range(1, a + 1):
-        if a % i == 0 and b % i == 0:
-            af = i
-    print(af)
-    if af == 1:
-        print("서로소")
-    elif af != 1:
-        print("서로소 아님")
+def add_func(d, e):
+    c = d + e
+    return c
 
+a = int(input("첫 번째 숫자를 입력해주세요: "))
+b = int(input("두 번째 숫자를 입력해주세요: "))
 
-def gcd(a, b):
-    for i in range(1, a + 1):
-        if a % i == 0 and b % i == 0:
-            af = i
-    return af
+f = add_func(a, b)
 
-a = int(input())
-b = int(input())
-gc(a, b)
-gcd(a,b)
-"""
-"""
-a = input("입력:")
-if a[7] == '3' or a[7] == '1':
-    print("성별:남자")
-else:
-    print("성별:여자")
-if a[7] == '1' or a[7] == '2':
-    print("나이:{}".format(2020 - (1900 + 10 * int(a[0]) + int(a[1]))))
-else:
-    print("나이:{}".format(2020 - (2000 + 10 * int(a[0]) + int(a[1]))))
-"""
-"""
-def pepole(a):
-    if(len(a)!=14):
-        print("잘못 입력하셨습니다.")
-        exit()
-    else:
-        if a[7] == '3' or a[7] == '1':
-            gen = '남자'
-        else:
-            gen = '여자'
-        if a[7] == '1' or a[7] == '2':
-            age = 2020 - (1900 + 10 * int(a[0]) + int(a[1])) + 1
-        else:
-            age = 2020 - (2000 + 10 * int(a[0]) + int(a[1])) + 1
-    print("나이는 {}살 성별은 {}입니다".format(age, gen))
-a = input()
-pepole(a)
-"""
-"""제기함수
-def fact(a):
-    if a <= 0:
-        return 1
-    else:
-        return a * fact(a-1)
+print("{} + {} = {}".format(a, b, f))
 
-a = int(input())
-print("{}".format(fact(a)))
+def aad_fnus(o, p):
+    t = o - p
+    return t
+
+c = int(input("첫 번째 숫자를 입력해주세요; "))
+d = int(input("두 번째 숫자를 입력해주세요: "))
+
+r = aad_fnus(c, d)
+
+print("{} - {} = {}".format(c, d, r))
+
+    q = g * h
+    return q
+def aaa_fune(g, h):
+
+j = r
+k = f
+
+y = aaa_fune(j, k)
+
+print("{} print(line.split('\n')[0])* {} = {}".format(k, j, y))
 """
-class B:
-    def say(self):#매소드
-        print("안녕")
-class A:
-    def __init__(self, name):
-        self.name = name
-    def say(self):#매소드
-        print("안녕{}".format(self.name))
 
-b = input()
-a1 = A(b) #객체
-a1.say()
+#f = open("melon.text", 'r')
+#lines = f.readlines()
 
-a2 = B()
-a2.say()
+#i#d = input("id : ")
+#pwd = input("pwd : ")
+
+#flag = 0
+#for line in lines:
+    #server_id = line.split(',')[0]
+    #server_pwd =
+    #if server_pwd == pwd and server_id == id:
+        #print("로그인이 되었습니다.")
+        #flag = 1
+        #break
+
+#if flag == 0:
+    #print("로그인에 실패했습니다.")
+f = open("melon.text", 'a')
+fr = open("melon.text", 'r')
+
+lines = fr.readlines()
+for line in lines:
+    server_id = line.split(',')[0]
+    server_pwd = line.split(',')[1]
+    for
+
+id = input()
+pw = input()
+
+f.write(id + "," + pw + '\n')
