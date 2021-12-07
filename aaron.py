@@ -1,147 +1,49 @@
-"""
-f = open("aron.txt","r")
-lines = f.readlines()
+# <변수>
+# 자료형 = 어떤 종류의 값을 담을 수 있는가
+# 123 정수형 값 = int형 a = 1
+#
+# "abc" 'ㄱㄴㄷ' = str형(string)
+#
+# 3.14 = float형
+#
+#
+# + - * / % //는 소수점 제거
 
-for line in lines:
-    print(line)
+# input() 어떤것이든 str형로 저장된다
 
-for line in lines:
-    print(line.split('\n')[0])
-
-a = "hihihikbyebye"
-b = a.split('k')
-print(b)
-
-def a1():
-    id = input("id:")
-    pwd = input("pwd:")
-    for line in lines:
-        server_id = line.split(',')[0]
-        server_pwd = line.split(',')[1].split('\n')[0]
-        if id == server_id and pwd == server_pwd:
-            print("로그인 완료")
-            return
-    print("다시")
-
-def a2():
-    id = input("id:")
-    pwd = input("pwd:")
-    flag = 0
-    for line in lines:
-        server_id = line.split(',')[0]
-        server_pwd = line.split(',')[1].split('\n')[0]
-        if id == server_id and pwd == server_pwd:
-            print("로그인 완료")
-            return
-    fr.write(id + ',' + pwd + '\n')
-    print("가입완료")
-
-f = open("test.txt","a")
-fr = open("test.txt","r")
-id = input("아이디를 입력하세요:")
-pwd = input("비밀번호를 입력하세요:")
-for line in lines:
-    server_id = line.split(',')[0]
-    server_pwd = line.split(',')[1].split('\n')[0]
-    if id == server_id:
-        print("이미 가입되어 있습니다.")
-    exit()
-f.write(id + ',' + pwd + '\n')
-print("가입완료")
-def make_board():
-
-    a =[]
-    for i in range(9):
-        a.append("-")
-
-    return a\
-"""
-
-def make_board():
-
-    a =[]
-    for i in range(9):
-        a.append("-")
-
-    return a
-
-def see_board():
-    print(board[0] + "|"+ board[1] + "|" + board[2])
-    print("ㅡㅡㅡ")
-    print(board[3] + "|"+ board[4] + "|" + board[5])
-    print("ㅡㅡㅡ")
-    print(board[6] + "|"+ board[7] + "|" + board[8])
+# bool은 ture 와 false 밖에 없다
+# ture와 false도 값이다
 
 
-board = make_board()
-see_board()
-player1 = input("O or X")
-if player1 == "O":
-    player2 = "X"
-    print("player1은 O, player2은 X")
-else:
-    player2 = "O"
-    print("player1은 X, player2은 O")
 
-for i in range(9):
+# <조건부>
+# if 조건:
+#     실행문
 
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
+# >, <, ==,!=, <=, >=  ==는 같다면 이다
+# or 는 둘중 하나만 만 되도 작동한다, and는 모두참이어야한다 ()는 우선 순위를 나누어 준다.
 
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player1
-    see_board()
-    print("player1이 {}에 {}을 표시했습니다.".format(select_turn, player1))
+# elif는 if 가 성립되면은 무시된다  else는 모두 안될 경우에 성립된다
 
 
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player2
-    see_board()
-    print("player2이 {}에 {}을 표시했습니다.".format(select_turn, player2))
+# <반복문>
 
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
+# for i in range(반복횟수):
 
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player1
-    see_board()
-    print("player1이 {}에 {}을 표시했습니다.".format(select_turn, player1))
+# a = int(input())
+#
+# if a % 2 == 1:
+#     print("odd")
+#
+# if a == 0:
+#     print("0")
+#
+# elif a % 2 == 0:
+#     print("even")
 
+# for i in range(1,11):
+#     print("*"*i)
 
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player2
-    see_board()
-    print("player2이 {}에 {}을 표시했습니다.".format(select_turn, player2))
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
+# for i in range(1,11):
+#     print("*"*(11-i))
 
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player1
-    see_board()
-    print("player1이 {}에 {}을 표시했습니다.".format(select_turn, player1))
-
-
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player2
-    see_board()
-    print("player2이 {}에 {}을 표시했습니다.".format(select_turn, player2))
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
-
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player1
-    see_board()
-    print("player1이 {}에 {}을 표시했습니다.".format(select_turn, player1))
-
-
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player2
-    see_board()
-    print("player2이 {}에 {}을 표시했습니다.".format(select_turn, player2))
-    select_turn = int(input("1.[1] 2.[2] 3.[3] 4.[4] 5.[5] 6.[6] 7.[7] 8.[8] 9.[9]"))
-
-    if board[select_turn - 1] == '-':
-        board[select_turn - 1] = player1
-    see_board()
-    print("player1이 {}에 {}을 표시했습니다.".format(select_turn, player1))
-    break
