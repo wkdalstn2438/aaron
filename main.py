@@ -94,13 +94,24 @@
 # print(a[0])
 
 
-# 랜덤값 20개를 리스트에 받기
-# 최대값 최솟값 찾기
+# while (조건):
+#     반복할 코드
 
-import random
-
-a = []
-
-a = random.randrange(20)
-
-print(a)
+# a = [7,1,3,5,4]
+# c = 0
+#
+# while c == c:
+#     for z in range(4):
+#         if a[z] <= a[z + 1]:
+#             c = c + 1
+#     if c == 4:
+#         break
+#     else:
+#         c = 0
+#
+#     for i in range(4):
+#         if a[i] > a[i + 1]:
+#             b = a[i]
+#             a[i] = a[i + 1]
+#             a[i + 1] = b
+# print(a)
